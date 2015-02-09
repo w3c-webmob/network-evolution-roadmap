@@ -25,10 +25,13 @@ Description and impacts of long term startegies.
 Detail 5G and impacts
 
 #### NFV
-Detail NFV and impacts
+Detail Network functions virtualization and impacts
+
+#### SDN
+Softdare Defined Networking
 
 #### MEC
-Detail MEC and impacts
+Detail Mobile Edge Computing and impacts
 
 ### Conclusion
 Erm, we need to write a conclusion, right?
