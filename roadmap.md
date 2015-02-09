@@ -28,7 +28,7 @@ Detail 5G and impacts
 Detail Network functions virtualization and impacts
 
 #### SDN
-Softdare Defined Networking
+Software Defined Networking
 
 #### MEC
 Detail Mobile Edge Computing and impacts
