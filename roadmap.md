@@ -32,6 +32,7 @@ Software Defined Networking
 
 #### MEC
 Detail Mobile Edge Computing and impacts
+[MEC at ETSI](https://portal.etsi.org/Portals/0/TBpages/MEC/Docs/Mobile-edge_Computing_-_Introductory_Technical_White_Paper_V1%2018-09-14.pdf)
 
 ### Conclusion
 Erm, we need to write a conclusion, right?
