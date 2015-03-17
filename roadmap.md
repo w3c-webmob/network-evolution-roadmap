@@ -32,11 +32,6 @@ Quick overview of the document - aims including "a roadmap of the expected evolu
 5G is, however, also often used. This is because no new standard exists for the evolution of the mobile network past LTE currently, therefore only requirements exist under the label "5G". 
 
 ### Current Status (2015)
-Overview of expectations for 2015 including:
-* countries / subscribers on 3G
-* countries / subscribers on LTE
-* Notable smaller updates
-
 Mobile operator technologies are heavily standardised, meaning little differentiation between similar level services throughout the globe. However, countries often differ in their deployment of these technologies, resulting in vast differences in throughput and latencies. Most new devices in the developed world will now come LTE enabled, offering 2G, 3G and LTE capabilties although not all developing countries have a widely deployed LTE network (EXAMPLES - spain, uk, us). Furthermore developing countries may offer 3G devices only. (CHECK on 2G only countries, although I think these are gone).
 
 #### Downgrading
