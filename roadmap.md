@@ -12,10 +12,10 @@ Quick overview of the document - aims including "a roadmap of the expected evolu
 * CDMA2000 1X - Voice standard of CDMA2000
 * CDMA2000 1xEV-DO - Data standard of CDMA2000. Revision A introduced protocols, new forward link data rates and quality of service flags to allow for use cases such as VoIP. Revision B improved the standard by managing edge-of-cell signal, using multiplexing to reduce latency and higher rates satisying use cases such as high definition video streaming.
 * GSM - 2G standard developed by the standards body ETSI. It operators in 219 countries as of 2014. It originally had no data requirements, later it expanded to include data communications including GPRS (around 56–114 kbit/s) and EDGE standards (around 400–1000 kbit/s).
-* UMTS - 3G mobile telecommunications system developed by 3GPP. UMTS uses WCDMA.
+* UMTS - 3G mobile telecommunications system developed by 3GPP. UMTS is a circuit plus packet switching combined network. UMTS uses WCDMA.
 * WCDMA - 3G mobile technology for voice, text, MMS and data communications. 
 * WCDMA HSPA - Data communications which extends WCDMA using shared channel, higher modulation and other methods to increase rates  (around 7–42 Mbit/s). HSPA+ extends these data rates up to 84 Mbit/s. In 2011 HSPA+ was operational in 170 countries. 
-* LTE - 4G mobile technology, short for "Long Term Evolution", developed for data communication and maintained by 3GPP. Users need an LTE capable device to make use of LTE as LTE operates on a separate radio spectrum. 
+* LTE - 4G mobile technology, short for "Long Term Evolution", developed for data communication and maintained by 3GPP. LTE is an all-IP flat architecture system. Users need an LTE capable device to make use of LTE as LTE operates on a separate radio spectrum. 
 * TD-LTE
 * AXGP
 * WiMAX
@@ -42,6 +42,38 @@ Mobile operator technologies are heavily standardised, meaning little differenti
 #### Downgrading
 It is important to understand how devices downgrade. A device will first attempt to register (CORRECT WORD?) a connection with it's highest capable connection mechanism; for most new devices this is LTE. If this is unsuccessul it will downgrade to the next most capable connection (usually HSPA/+) and keep downgrading till it can establish a connection. 
 
+#### LTE
+all-IP flat architecture system
+
+The LTE specification provides downlink peak rates of 300 Mbit/s (Peak download rates up to 299.6 Mbit/s and upload rates up to 75.4 Mbit/s)
+
+permitting a transfer latency of less than 5 ms in the radio access network
+
+LTE has the ability to manage fast-moving mobiles and supports multi-cast and broadcast streams
+
+Improved support for mobility, exemplified by support for terminals moving at up to 350 km/h (220 mph) or 500 km/h (310 mph) depending on the frequency band
+
+Support for cell sizes from tens of metres radius (femto and picocells) up to 100 km (62 miles) radius macrocells
+
+Rank	Country/Territory	Penetration
+1	 South Korea	62.0%
+2	 Japan	21.3%
+3	 Australia	21.1%
+4	 United States	19.0%
+5	 Sweden	14.0%
+6	 Canada	8.1%
+7	 United Kingdom	5.0%
+8	 Germany	3.0%
+9	 Russia	2.0%
+10	 Philippines	1.0%
+
+[List of devices on wikipedia](http://en.wikipedia.org/wiki/LTE_%28telecommunication%29#Devices)
+
+##### LTE Advanced
+
+#### 3G Technologies
+
+#### 2G
 
 __What does this mean for developers?__
 
