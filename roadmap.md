@@ -16,8 +16,8 @@ Quick overview of the document - aims including "a roadmap of the expected evolu
 * WCDMA - 3G mobile technology for voice, text, MMS and data communications. 
 * WCDMA HSPA - Data communications which extends WCDMA using shared channel, higher modulation and other methods to increase rates  (around 7–42 Mbit/s). HSPA+ extends these data rates up to 84 Mbit/s. In 2011 HSPA+ was operational in 170 countries. 
 * LTE - 4G mobile technology, short for "Long Term Evolution", developed for data communication and maintained by 3GPP. LTE is an all-IP flat architecture system. Users need an LTE capable device to make use of LTE as LTE operates on a separate radio spectrum. 
-* TD-LTE
-* AXGP
+* TD-LTE - (Time-Division Duplex LTE) one of the two variants of LTE (the other being LTE-FDD). The differences exist between uploading and downloading data. LTE-TDD uses a single frequency, alternating between uploading and downloading data through time.
+* AXGP - "4G" technology originating in Japan, not LTE but compaitble with TD-LTE systems in China.
 * WiMAX
 * LTE Advanced - major enhancement to LTE
 * TD-LTE Advanced
