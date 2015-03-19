@@ -19,7 +19,7 @@ Quick overview of the document - aims including "a roadmap of the expected evolu
 * TD-LTE
 * AXGP
 * WiMAX
-* LTE Advanced
+* LTE Advanced - major enhancement to LTE
 * TD-LTE Advanced
 * WiMAX 2
 * iDEN
@@ -65,6 +65,13 @@ Rank	Country/Territory	Penetration
 [List of devices on wikipedia](http://en.wikipedia.org/wiki/LTE_%28telecommunication%29#Devices)
 
 ##### LTE Advanced
+enhanced version of lte
+3gpp managed
+Backwards compatible with LTE
+100 MHz aggregated bandwidth, LTE-Advanced provides almost 3.3 Gbit peak download rates per sector of the base station under ideal conditions
+In order to improve the quality of service for users in hotspots and on cell edges, heterogenous networks (HetNet) are formed of a mixture of macro-, pico- and femto base stations serving corresponding-size areas. 
+
+[List of devices](http://en.wikipedia.org/wiki/List_of_devices_with_LTE_Advanced)
 
 #### 3G Technologies
 
