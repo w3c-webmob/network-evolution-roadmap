@@ -54,14 +54,23 @@ Rank	Country/Territory	Penetration
 9	 Russia	2.0%
 10	 Philippines	1.0%
 
-
+__What does this mean for developers?__
+???
 
 ##### LTE Advanced
 As may be obvious by the title LTE Advanced is an enhanced version of LTE. The standards group 3GPP set the standards for LTE Advanced. LTE Advanced uses both the hardware of LTE (so, it is backwards compatible with LTE) but makes changes to elements in the network to meet more strict requirements. LTE Advanced can support up to 100 MHz of aggreated bandwidth (see Carrier Aggregation below), and 3.3Gbit peak download rates in ideal situations. Heterogenous networks (HetNet) are sometimes used to help those users on the edge of the cell (*almost* outside of cell coverage).
 
-A user will need an LTE Advanced-capable device to use LTE Advanced. the list of devices which support LTE are constantly growing.  [Wikipedia][List of devices](http://en.wikipedia.org/wiki/List_of_devices_with_LTE_Advanced)
+A user will need an LTE Advanced-capable device to use LTE Advanced. the list of devices which support LTE are constantly growing.  [Wikipedia][List of devices](http://en.wikipedia.org/wiki/List_of_devices_with_LTE_Advanced).
+
+__What does this mean for developers?__
+???
 
 #### 3G Technologies
+3G technologies are still the most used generation of ...
+
+__What does this mean for developers?__
+
+How should data be sent, one file, or many different files? How does the network cope with large files?! Etc.
 
 #### 2G
 
