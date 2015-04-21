@@ -85,7 +85,11 @@ If you are developing an extremely robust application you may need to test your 
 Description and impacts of current startegies.
 
 #### Carrier Aggregation
-Detail carrier aggregation and impacts
+[info](https://www.qualcomm.com/invention/technologies/lte/lte-carrier-aggregation)
+
+Carrier aggregation combines mobile operator networks to offer a larger bitrate to the user. Carrier aggregation used LTE technologies to do this. Up to five operators can currently "aggregate" as per the last set of 3GPP standards. Currently carrier aggregation only works for the "downlink" (traffic flowing from the core operator network to the device), but uplink aggregation will come soon.
+
+Impacts?
 
 #### Network Management
 Detail network management and impacts
@@ -94,7 +98,9 @@ Detail network management and impacts
 Description and impacts of long term startegies.
 
 #### 5G
-Detail 5G and impacts
+As of May 2015 there are no defined requirements for 5G which have been agreed by a consensus of mobile network operators. Mobile Network Operators are currently working with a number of standards bodies to define these, and are basing these numbers off predictions of what a 5G network should be able to achieve to account for things such as: video data transfer, WebRTC, increase in web traffic, and internet of things devices. 
+
+[more needed?]
 
 #### NFV
 Detail Network functions virtualization and impacts
