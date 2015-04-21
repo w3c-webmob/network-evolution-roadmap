@@ -38,17 +38,9 @@ It is important to understand how devices downgrade. A device will first attempt
 Mobile operator technologies are heavily standardised, meaning little differentiation between similar level services throughout the globe. However, countries often differ in their deployment of these technologies, resulting in vast differences in throughput and latencies. Most new devices in the developed world will now come LTE enabled, offering 2G, 3G and LTE capabilties although not all developing countries have a widely deployed LTE network (EXAMPLES - spain, uk, us). Furthermore developing countries may offer 3G devices only. (CHECK on 2G only countries, although I think these are gone).
 
 #### LTE
-all-IP flat architecture system
+LTE architecture is completely based off of IP. Downlink rates on LTE (rates from the core mobile network to a users device) can reach up to 300 Mbit/s, and latencies in the radio access network can be less than 5ms. LTE deals well with fast moving devices (say, if a user is on a train up to 500km/h depending on frequency band) and supports streaming and multi-casts.
 
-The LTE specification provides downlink peak rates of 300 Mbit/s (Peak download rates up to 299.6 Mbit/s and upload rates up to 75.4 Mbit/s)
-
-permitting a transfer latency of less than 5 ms in the radio access network
-
-LTE has the ability to manage fast-moving mobiles and supports multi-cast and broadcast streams
-
-Improved support for mobility, exemplified by support for terminals moving at up to 350 km/h (220 mph) or 500 km/h (310 mph) depending on the frequency band
-
-Support for cell sizes from tens of metres radius (femto and picocells) up to 100 km (62 miles) radius macrocells
+A user will need an LTE-capable device to use LTE. the list of devices which support LTE are constantly growing.  [Wikipedia](http://en.wikipedia.org/wiki/LTE_%28telecommunication%29#Devices) has a good, almost up-to-date list.
 
 Rank	Country/Territory	Penetration
 1	 South Korea	62.0%
@@ -62,16 +54,12 @@ Rank	Country/Territory	Penetration
 9	 Russia	2.0%
 10	 Philippines	1.0%
 
-[List of devices on wikipedia](http://en.wikipedia.org/wiki/LTE_%28telecommunication%29#Devices)
+
 
 ##### LTE Advanced
-enhanced version of lte
-3gpp managed
-Backwards compatible with LTE
-100 MHz aggregated bandwidth, LTE-Advanced provides almost 3.3 Gbit peak download rates per sector of the base station under ideal conditions
-In order to improve the quality of service for users in hotspots and on cell edges, heterogenous networks (HetNet) are formed of a mixture of macro-, pico- and femto base stations serving corresponding-size areas. 
+As may be obvious by the title LTE Advanced is an enhanced version of LTE. The standards group 3GPP set the standards for LTE Advanced. LTE Advanced uses both the hardware of LTE (so, it is backwards compatible with LTE) but makes changes to elements in the network to meet more strict requirements. LTE Advanced can support up to 100 MHz of aggreated bandwidth (see Carrier Aggregation below), and 3.3Gbit peak download rates in ideal situations. Heterogenous networks (HetNet) are sometimes used to help those users on the edge of the cell (*almost* outside of cell coverage).
 
-[List of devices](http://en.wikipedia.org/wiki/List_of_devices_with_LTE_Advanced)
+A user will need an LTE Advanced-capable device to use LTE Advanced. the list of devices which support LTE are constantly growing.  [Wikipedia][List of devices](http://en.wikipedia.org/wiki/List_of_devices_with_LTE_Advanced)
 
 #### 3G Technologies
 
