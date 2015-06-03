@@ -17,6 +17,8 @@ Quick overview of the document - aims including "a roadmap of the expected evolu
 * WCDMA HSPA - Data communications which extends WCDMA using shared channel, higher modulation and other methods to increase rates  (around 7–42 Mbit/s). HSPA+ extends these data rates up to 84 Mbit/s. In 2011 HSPA+ was operational in 170 countries. 
 * LTE - 4G mobile technology, short for "Long Term Evolution", developed for data communication and maintained by 3GPP. LTE is an all-IP flat architecture system. Users need an LTE capable device to make use of LTE as LTE operates on a separate radio spectrum. 
 * TD-LTE - (Time-Division Duplex LTE) one of the two variants of LTE (the other being LTE-FDD). The differences exist between uploading and downloading data. LTE-TDD uses a single frequency, alternating between uploading and downloading data through time.
+* LTE-U - LTE for the unlicensed band.
+* LTE-eMBMS - LTE Enhanced Multimedia Broadcast Services.  Provides for point-to-multipoint transmission over LTE, and is compatible with HTTP streaming techniques such as DASH (Dynamic Adatpive Streaming over HTTP).
 * AXGP - "4G" technology originating in Japan, not LTE but compaitble with TD-LTE systems in China.
 * WiMAX
 * LTE Advanced - major enhancement to LTE
@@ -65,6 +67,10 @@ A user will need an LTE Advanced-capable device to use LTE Advanced. the list of
 __What does this mean for developers?__
 ???
 
+##### LTE eMBMS
+eMBMS allows for broadcast services, such as linear television, to be made available over LTE cellular systems.  This allows for broadcast reach to a wide array of mobile devices.  eMBMS is IP compatible, and the 3GPP has standardized the used of Dynamic Adaptive Streaming over HTTP (DASH) for eMBMS.  This allows for HTML5-compatible rendering of eBMBS video services using an off-the-shelf browser provided that the target device is equipped with an eMBMS receiver.
+__What does this mean for developers?__
+Developers may use HTML5-enabled browsers to develop custom applications that can render broadcast services.
 #### 3G Technologies
 3G technologies are still the most used generation of ...
 
