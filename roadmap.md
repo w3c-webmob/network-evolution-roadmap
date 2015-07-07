@@ -112,26 +112,30 @@ As of May 2015 there are no defined requirements for 5G which have been agreed b
 
 [more needed?]
 
-#### Network Function Virtualisation (NFV)
-NFV is the virtualisation of mobile networks. Currently mobile networks are built on a lot of physical switches, routers, servers and gateways. NFV wants to change this to virtualised networks, using virtual machines and cloud computing technologies. This could mean that operators could expand their networks cheaply and for limited times, so situations such as large events which usually put operator networks under a lot of strain can be handled. NFV is usually talked
-
-#### Mobile Edge Computing (MEC)
-
-Detail Mobile Edge Computing and impacts
-[MEC at ETSI](https://portal.etsi.org/Portals/0/TBpages/MEC/Docs/Mobile-edge_Computing_-_Introductory_Technical_White_Paper_V1%2018-09-14.pdf)
-
 #### Caching and CDNs
 Mobile networks operators use caches and CDNs. The difference is:
 
 * Caching happens without the knowledge of the content provider or user, and they don't need to do anything to make it happen.
 * CDNs cache content with the content providers knowledge and consent, usually by signing a contract with a CDN provider (Akamai, CloudFlare etc.).
 
-In the mobile network the largest latencies happen between the operator's Core Network and the device. This is becuase locating users, authenticating their devices and sending the content through the air can take time. Even so, most if the time caching in the mobile operator network happens in the Core Network, this is because not sending requests out to the internet saves operators a lot of money, which hopefully means either more savings for customers or more money put in to update and evolve networks.
+In the mobile network the largest latencies happen between the operator's Core Network and the device. This is becuase locating users, authenticating their devices and sending the content through the air can take time. Even so, most if the time caching in the mobile operator network happens in the Core Network, this is because not sending requests out to the internet saves operators a lot of money, which hopefully means either more savings for customers or more money put in to update and evolve networks. Also, caching in the RAN is hard; users move often so it is hard to know where to send their cached data, and the number of base stations means caching equipment can become expensive. This may change with [Mobile Edge Computing](#). 
 
 These caches are "transparent" but they will not cache HTTPS data and will respect cache headers. 
 
 Within the next few years we should see a shift away from caching towards CDNs, interconnected CDNs and software defined networking. These new methods of getting content closer to the user may mean a decrease in relianceon normal Core Network caching described here.
 
+#### Network Function Virtualisation (NFV)
+NFV is the virtualisation of mobile networks. Currently mobile networks are built on a lot of physical switches, routers, servers and gateways. NFV wants to change this to virtualised networks, using virtual machines and cloud computing technologies. This could mean that operators could expand their networks cheaply and for limited times, so situations such as large events which usually put operator networks under a lot of strain can be handled. 
+
+NFV is usually talked about alongside Software Defined Networking (SDN). NFV and SDN aren't the same thing but are built off the same principles of seperating layers of the network. SDN was defined by some organisations and universities, NFV is developed mainly my service providers. Architectures can be designed using NFV and SDN.
+
+#### Mobile Edge Computing (MEC)
+In [Caching](#) section we explained caching in mobile networks happens mostly in the Core Network. Mobile Edge Computing is a set of new work happening in the ETSI standards body which aims to place intelligent servcer in the RAN. This server will use cloud technologies to manage caches and other intelligent applications like caches or transcoders ultimately allowing content to live or be cached closer to the user saving on the great latencies in mobile networks, or cutting down the time for round trips.
+
+##### What this means for developers
+The details of MEC are not decided yet but the ultimate goal is to decrease the latencies for users and take stress off bottlenecks in the operator network. Developers could benefit from a few different ways. First of all content can be placed closer to the user reducing latency times to your site; this could be done transparently, but with end-to-end encryption becoming more wide spread it is more likely developers will need to sign up with a CDN or MEC provider who can provide MEC server caching. Some developers will also have location-specific apps which could sit closer to users in those locations, such as for a large event. Some developers could also push app updates to these MEC servers when they have a large app updates occur. Use cases are still being collected, so please send some in!
+
+[MEC at ETSI](https://portal.etsi.org/Portals/0/TBpages/MEC/Docs/Mobile-edge_Computing_-_Introductory_Technical_White_Paper_V1%2018-09-14.pdf)
 
 ### Tools
 network restriction tools
