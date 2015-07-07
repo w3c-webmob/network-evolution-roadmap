@@ -6,6 +6,13 @@ This document aims to provide W3C groups and developers with a broad overview of
 ### Introduction
 Quick overview of the document - aims including "a roadmap of the expected evolution of mobile networks which have potential impacts on Web applications".
 
+### Basic Understaning of a Mobile Operator Network
+Mobile networks operate a centralised architecture; traffic traverses through a small number of packet-gateways within the Core Network before reaching the internet
+
+RAN
+Core Network
+Internet
+
 ### Terminology
 
 * CDMA2000 - 3G mobile technology for sending voice, data, and signaling data between mobile phones and cell sites. It is developed by 3GPP2 and used especially in North America and South Korea.
@@ -105,15 +112,26 @@ As of May 2015 there are no defined requirements for 5G which have been agreed b
 
 [more needed?]
 
-#### NFV
-Detail Network functions virtualization and impacts
+#### Network Function Virtualisation (NFV)
+NFV is the virtualisation of mobile networks. Currently mobile networks are built on a lot of physical switches, routers, servers and gateways. NFV wants to change this to virtualised networks, using virtual machines and cloud computing technologies. This could mean that operators could expand their networks cheaply and for limited times, so situations such as large events which usually put operator networks under a lot of strain can be handled. NFV is usually talked
 
-#### SDN
-Software Defined Networking
+#### Mobile Edge Computing (MEC)
 
-#### MEC
 Detail Mobile Edge Computing and impacts
 [MEC at ETSI](https://portal.etsi.org/Portals/0/TBpages/MEC/Docs/Mobile-edge_Computing_-_Introductory_Technical_White_Paper_V1%2018-09-14.pdf)
+
+#### Caching and CDNs
+Mobile networks operators use caches and CDNs. The difference is:
+
+* Caching happens without the knowledge of the content provider or user, and they don't need to do anything to make it happen.
+* CDNs cache content with the content providers knowledge and consent, usually by signing a contract with a CDN provider (Akamai, CloudFlare etc.).
+
+In the mobile network the largest latencies happen between the operator's Core Network and the device. This is becuase locating users, authenticating their devices and sending the content through the air can take time. Even so, most if the time caching in the mobile operator network happens in the Core Network, this is because not sending requests out to the internet saves operators a lot of money, which hopefully means either more savings for customers or more money put in to update and evolve networks.
+
+These caches are "transparent" but they will not cache HTTPS data and will respect cache headers. 
+
+Within the next few years we should see a shift away from caching towards CDNs, interconnected CDNs and software defined networking. These new methods of getting content closer to the user may mean a decrease in relianceon normal Core Network caching described here.
+
 
 ### Tools
 network restriction tools
