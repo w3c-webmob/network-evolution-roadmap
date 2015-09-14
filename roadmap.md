@@ -15,12 +15,12 @@ Mobile operator networks are nicely divided into two main sections:
 The external network (internet) is connected to the mobile network via the PGW in the core network. The mobile network responsbility ends here. 
 
 #### Understanding xG
-3G, 4G and even 5G are common terms we use to describe networks, but they're not always an accurate representation of "evolution" of the mobile networks. xG terms describe a set of requirements, usually identified by a standards body, which describes what that standards body feels is an acceptable set of requirements for the "next generation" in mobile telecommunications. 4G is a great example: requirements set by the ITU were originally too steep to achieve for the first new hardware tests of LTE, later once the ITU reset the requirements some 3G-based services met the requirements and branded themselves as 4G, despite not being a major system upgrade. (//more explanation please! hardware upgrade? IP network? etc.). To make things clearer mobile operators tend to refer to the technology rather than the xG, most commonly now: LTE.
+3G, 4G and even 5G are common terms we use to describe networks, but they're not always an accurate representation of "evolution" of the mobile networks. xG terms describe a set of requirements, usually identified by a standards body, which describes what that standards body feels is an acceptable set of requirements for the "next generation" in mobile telecommunications. 4G is a great example: requirements set by the ITU were originally too steep to achieve for the first new hardware tests of LTE, later once the ITU reset the requirements some 3G-based services met the requirements and branded themselves as 4G, despite not being a major system upgrade. A major system upgrade in mobile networks would usually require a large hardware change (or rollout) with limited or no backwards compatibility; for LTE the change meant moving to a full IP network, for 5G it may mean virtualisation of the network. 
 
-5G is, however, also often used. This is because no new standard exists for the evolution of the mobile network past LTE currently, therefore only requirements exist under the label "5G". 
+To make labelling clearer mobile operators tend to refer to the technology rather than the xG, most commonly now: LTE. 5G is, however, also often used. This is because no new standard exists for the evolution of the mobile network past LTE currently, therefore only requirements exist under the label "5G". 
 
 #### Downgrading
-It is important to understand how devices downgrade. A device will first attempt to register (CORRECT WORD?) a connection with it's highest capable connection mechanism; for most new devices this is LTE. If this is unsuccessul it will downgrade to the next most capable connection (usually HSPA/+) and keep downgrading till it can establish a connection. 
+It is important to understand how devices downgrade. A device will first attempt to setup a connection with it's highest capable connection mechanism; for most new devices this is LTE. If this is unsuccessul it will downgrade to the next most capable connection (usually HSPA/+) and keep downgrading till it can establish a connection. Most devices will report "no connection" if the allowed bandwidth on the connection is less than 100kb/s. 
 
 ### Current Status (2015)
 Mobile operator technologies are heavily standardised, meaning little differentiation between similar level services throughout the globe. However, countries often differ in their deployment of these technologies, resulting in vast differences in throughput and latencies. Most new devices in the developed world will now come LTE enabled, offering 2G, 3G and LTE capabilties although not all developing countries have a widely deployed LTE network (EXAMPLES - spain, uk, us). Furthermore developing countries may offer 3G devices only. (CHECK on 2G only countries, although I think these are gone).
@@ -30,33 +30,19 @@ LTE architecture is completely based off of IP. Downlink rates on LTE (rates fro
 
 A user will need an LTE-capable device to use LTE. the list of devices which support LTE are constantly growing.  [Wikipedia](http://en.wikipedia.org/wiki/LTE_%28telecommunication%29#Devices) has a good, almost up-to-date list.
 
-Rank	Country/Territory	Penetration
-1	 South Korea	62.0%
-2	 Japan	21.3%
-3	 Australia	21.1%
-4	 United States	19.0%
-5	 Sweden	14.0%
-6	 Canada	8.1%
-7	 United Kingdom	5.0%
-8	 Germany	3.0%
-9	 Russia	2.0%
-10	 Philippines	1.0%
-
-__What does this mean for developers?__
-???
-
 ##### LTE Advanced
 As may be obvious by the title LTE Advanced is an enhanced version of LTE. The standards group 3GPP set the standards for LTE Advanced. LTE Advanced uses both the hardware of LTE (so, it is backwards compatible with LTE) but makes changes to elements in the network to meet more strict requirements. LTE Advanced can support up to 100 MHz of aggreated bandwidth (see Carrier Aggregation below), and 3.3Gbit peak download rates in ideal situations. Heterogenous networks (HetNet) are sometimes used to help those users on the edge of the cell (*almost* outside of cell coverage).
 
 A user will need an LTE Advanced-capable device to use LTE Advanced. the list of devices which support LTE are constantly growing.  [Wikipedia][List of devices](http://en.wikipedia.org/wiki/List_of_devices_with_LTE_Advanced).
 
-__What does this mean for developers?__
-???
-
 ##### LTE eMBMS
 eMBMS allows for broadcast services, such as linear television, to be made available over LTE cellular systems.  This allows for broadcast reach to a wide array of mobile devices.  eMBMS is IP compatible, and the 3GPP has standardized the used of Dynamic Adaptive Streaming over HTTP (DASH) for eMBMS.  This allows for HTML5-compatible rendering of eBMBS video services using an off-the-shelf browser provided that the target device is equipped with an eMBMS receiver.
+
 __What does this mean for developers?__
-Developers may use HTML5-enabled browsers to develop custom applications that can render broadcast services.
+A request/response round trip on an LTE network will take around 50-100ms. A number of request/responses will need to occur before a user will see the requested web content including: DNS lookup, TCP setup and HTTP connection establishment. If your site runs HTTPS the SSL/TLS handshake must also occur. Some developers aim to achieve the less than 1 second page load time. This is possible with LTE although it is prudent to factor in the number of round trips and the latencies attached to these. Developers can assume then that an LTE connection to an HTTPS site will take around 250ms. After this resources need to be fetched and rendered. 
+
+LTE's bandwidth and speed cabailities allow developers to serve a variety of content in their web apps including HTML5 video, complex images and larger scripts although smaller and fewer resources is always better for performance!
+
 #### 3G Technologies
 3G technologies are still the most used generation of ...
 
@@ -65,8 +51,18 @@ __What does this mean for developers?__
 How should data be sent, one file, or many different files? How does the network cope with large files?! Etc.
 
 #### 2G
+2G networks were first launched in 1991 and although mobile networks have evolved drastically since then 2G is still used in many parts of the world. Data on the original 2G was limited to SMS (text) and MMS (media) messaging. 2.5G (GPRS) added packet switching allowing connections to the internet. 2.75G (EDGE) added new modulation techniques to improve data transmission rates.
+
+2G currently has the largest reach around the world: GSM (a TDMA based 2G technology) reaches 80% of the world's mobile network subscribers and cdmaOne (CDMA based) reaches 17%. However, a number of mobile network operators are beginning to switch their [2G service off](https://en.wikipedia.org/wiki/2G#2G_Shut_Down).
 
 __What does this mean for developers?__
+2G networks usually have around around 150 - 400 kb/s of bandwidth. This means serving complex webpages, apps and resources become near impossible. 2G is still widely used around the globe, more devices and more people have access to this service than any other. However, developers should remember that some 2G services will be switched off in the next twelve months.
+
+If you want to support 2G you will need to serve as few resources as possible, and make these resources small. Heavy resources such as video or high resolution images won't load nicely over 2G. Developers are still encouraged to load their mobile site over 2G connections but setup some checks to deal with 2G. For instance: make sure your site runs without javascript and still renders nicely in the instance where images might not load. Try to use web fonts where possible (or fall back to a web font which loads nicely on the page) and use image placeholders (e.g. coloured boxes in css) when images are imperitive to the design. Other normal performance measures should be taken: minimise scripts, use CDNs and allow caching. 
+
+### HTTP and Mobile Networks
+
+### Geographical Differences
 
 If you are developing an extremely robust application you may need to test your application on the bandwidths your users are likely to experience. Try to find out what the coverage of the mobile network is within the countries / regions you are operating (make sure to check for all of LTE, HSPA, EDGE and GPRS!) and test your app using network restriction tools.
 
