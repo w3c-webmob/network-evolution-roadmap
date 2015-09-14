@@ -61,6 +61,13 @@ __What does this mean for developers?__
 If you want to support 2G you will need to serve as few resources as possible, and make these resources small. Heavy resources such as video or high resolution images won't load nicely over 2G. Developers are still encouraged to load their mobile site over 2G connections but setup some checks to deal with 2G. For instance: make sure your site runs without javascript and still renders nicely in the instance where images might not load. Try to use web fonts where possible (or fall back to a web font which loads nicely on the page) and use image placeholders (e.g. coloured boxes in css) when images are imperitive to the design. Other normal performance measures should be taken: minimise scripts, use CDNs and allow caching. 
 
 ### HTTP and Mobile Networks
+The new version of the HTTP protocol (HTTP/2.0) was recently standardised by the IETF. HTTP/2.0 has some impacts to developer performance methods. Pervious performance measures stated that reducing the number of scripts (by creating one large file with all scripts) was better for performance; this was because HTTP/1.1 did not use mutliplexing and had to rely on multiple TCP streams to make multiple requests. HTTP/2.0 uses multiplexing and so can easily make many requests / responses on the same TCP connection. In this case smaller and more scripts and css files are acceptable. 
+
+The Mobile Network manages lower layers of communication than HTTP and TCP. Both HTTP and TCP run ''over'' mobile networks so the behaviour of both of these protocols does not impact the behaviour of the mobile network. Developers can then be assured that whether they send one large script file or lots of smaller ones makes a difference to these layers (applicaton and transport) but not to the mobile network.
+
+Although, developers should always be aware that the mobile network behaviour will affect the user experience of their apps and sites, and so should use performance methods to make sure their site copes under any circumstances.
+
+[NETWORK LAYER DIAGRAM]
 
 ### Geographical Differences
 
