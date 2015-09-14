@@ -9,12 +9,10 @@ Quick overview of the document - aims including "a roadmap of the expected evolu
 ### Mobile Operator Network in a Nutshell
 Mobile operator networks are nicely divided into two main sections:
 
-* Radio Access Network (RAN) - connects a user's device to the Core Network. This includes base station which are often grouped in "tracking areas". A Radio Resource Controller lives in the cheduling of who talks when, allocated bandwidth, the signal power used, the power state of each device, and a dozen other variables.
-* Core Network
+* Radio Access Network (RAN) - connects a user's device to the Core Network. This includes base station which are often grouped in "tracking areas". A Radio Resource Controller lives within the base station and manages the scheduling of who talks when, allocated bandwidth, the signal power used, the power state of each device, and a dozen other variables.
+* Core Network - the Core Network connects the radio network to the interent and manages other functions inbetween including routing traffic and billing. The Core Network receives data from the internet into the PGW (Packet Gateway). The PGW manages any policy and billing and passes the data to the SGW (Serving Gateway) to send to the user. The SGW likely does not know where the user is, so queries the MME (Mobility Management Entity) to tell it which base station and location to send the data to to reach the user.
 
-RAN
-Core Network
-Internet
+The external network (internet) is connected to the mobile network via the PGW in the core network. The mobile network responsbility ends here. 
 
 #### Understanding xG
 3G, 4G and even 5G are common terms we use to describe networks, but they're not always an accurate representation of "evolution" of the mobile networks. xG terms describe a set of requirements, usually identified by a standards body, which describes what that standards body feels is an acceptable set of requirements for the "next generation" in mobile telecommunications. 4G is a great example: requirements set by the ITU were originally too steep to achieve for the first new hardware tests of LTE, later once the ITU reset the requirements some 3G-based services met the requirements and branded themselves as 4G, despite not being a major system upgrade. (//more explanation please! hardware upgrade? IP network? etc.). To make things clearer mobile operators tend to refer to the technology rather than the xG, most commonly now: LTE.
