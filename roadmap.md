@@ -90,9 +90,14 @@ Detail network management and impacts
 Description and impacts of long term startegies.
 
 #### 5G
-As of May 2015 there are no defined requirements for 5G which have been agreed by a consensus of mobile network operators. Mobile Network Operators are currently working with a number of standards bodies to define these, and are basing these numbers off predictions of what a 5G network should be able to achieve to account for things such as: video data transfer, WebRTC, increase in web traffic, and internet of things devices. 
+[NGMN](#)(Next Generation Mobile Networks) published 5G requirements as 
+[white paper](https://www.ngmn.org/uploads/media/NGMN_5G_White_Paper_V1_0.pdf). 
+5G is positioned to address the demands and business contexts of 2020 and beyond. 
+It is expected to enable a fully mobile and connected service and to empower 
+socio-economic transformations in countless ways many of which are unimagined today, 
+including those for productivity, sustainability and well-being. In 5G, NGMN anticipates the need for new radio interface(s) driven by use of higher frequencies, specific use cases such as Internet of Things (IoT) or specific capabilities (e.g., lower latency), which goes beyond what 4G and its enhancements can support.
 
-[more needed?]
+Now, 3GPP SA1 is dicussing about the service usecase in 5G. The name of study item is Smarter (New Services and Markets Technology Enablers). [info](http://www.3gpp.org/DynaReport/22891.htm)
 
 #### Caching and CDNs
 Mobile networks operators use caches and CDNs. The difference is:
@@ -148,3 +153,4 @@ Erm, we need to write a conclusion, right?
 * iDEN
 * TDMA
 * Analog
+* NGMN -  mobile telecommunications association of mobile operators, vendors, manufacturers and research institutes. It was founded by major mobile operators in 2006 as an open forum to evaluate candidate technologies to develop a common view of solutions for the next evolution of wireless networks. Its objective is to ensure the successful commercial launch of future mobile broadband networks through a roadmap for technology and friendly user trials. https://www.ngmn.org/
