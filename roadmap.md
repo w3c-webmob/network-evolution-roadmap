@@ -140,6 +140,12 @@ network restriction tools
 * AT&T Aro
 * Chrome Devkit
 * facebook tools
+* https://github.com/tylertreat/Comcast
+* charles proxy
+* wireshark
+* http://nshipster.com/network-link-conditioner/
+* DummyNet, Network Link Conditioner & Slowy on OSX, Clumsy on Windows
+* Fiddler and MITMProxy are also good.
 
 ### Final Statements
 Erm, we need to write a conclusion, right?
@@ -166,3 +172,12 @@ Erm, we need to write a conclusion, right?
 * TDMA
 * Analog
 * NGMN -  mobile telecommunications association of mobile operators, vendors, manufacturers and research institutes. It was founded by major mobile operators in 2006 as an open forum to evaluate candidate technologies to develop a common view of solutions for the next evolution of wireless networks. Its objective is to ensure the successful commercial launch of future mobile broadband networks through a roadmap for technology and friendly user trials. https://www.ngmn.org/
+* 
+
+### Thanks
+Twitter
+* Patrick Hamann
+* Anthony Ricaud @rik24d
+* Dan Jenkins @dan_jenkins
+* andy davies
+* Shaun Cooley @shauncooley
