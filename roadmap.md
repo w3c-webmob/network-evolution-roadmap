@@ -132,12 +132,14 @@ It may be helpful to web and internet standards setters and developers to unders
 * __European Telecommunications Standards Institute (ETSI):__ makes standards for for Information and Communications Technologies (ICT) with a global focus. ETSI organise their standards into technology clusters; relevant to mobile networks includes: security inclyding cyber secuirty, lawful intercept and emergency telecommunication, wireless systems including the standards EDGE, GPRS, UMTS, Mobile Edge Computing and smart cards and standards for Internet of Things including RFID, data security and management and Machine-to-Machine. ETSI has a global focus and is headquartered in Sophia-Antipolis, France.
 * __3rd Generation Partnership Project (3GPP):__ a global collaboration between telecommunications associations. Originally 3GPP worked on developing the 3G standard. It now looks after standards for radio access networks (RAN), the core transport network, service capabilities, codecs, security and quality of service. 
 * __Open Mobile Alliance (OMA)__: develops standards usually on the application layer for the mobile phone industry. Previously these standards where being worked on in a number of other groups and forums, so the OMA brought them together under the same umbrella. The OMA currently work on standards for Network APIs covering chat, file transfer, image share and messaaging. They also standardise authorisation, secuirty and implementation of Network APIs, provisioning, charging and device management scheduling.
-* __GSMA__: 
+* __GSMA__: The GSMA represents the interests of mobile operators worldwide including running technical projects and policy support. GSMA runs a number of working groups which focus on standards for billing, roaming, security algorithms, terminal testings and building and manitaing the IMEI database. GSMA has a global membership and is headqaurtered in London. 
+* __International Telecommunication Union (ITU):__ is an agency of the United Nations which is responsible for issues related to information and communication technologies. Particularly of importance to mobile operators is the ITU manages the global use of radio spectrum and assisting in the development of telecommunicatio standards including data, voice, and next generation networks. In the developing world the ITU works to improve the telecommunication infrastructure. and assists in the development and coordination of worldwide technical standards.
 
 ### Tools
 network restriction tools
 * AT&T Aro
 * Chrome Devkit
+* facebook tools
 
 ### Final Statements
 Erm, we need to write a conclusion, right?
