@@ -74,18 +74,16 @@ Although, developers should always be aware that the mobile network behaviour wi
 If you are developing an extremely robust application you may need to test your application on the bandwidths your users are likely to experience. Try to find out what the coverage of the mobile network is within the countries / regions you are operating (make sure to check for all of LTE, HSPA, EDGE and GPRS!) and test your app using network restriction tools.
 
 ### Current Evolution Areas
-Some mobile operators have been working on and deploying technologies to help improve performance on their networks. Some of these are detailed below alongside work commencing to define the requirements for 5G. 
+Some mobile operators have been working on and deploying technologies to help improve performance on their networks. Some of these are detailed below. 
 
 #### Carrier Aggregation
-[info](https://www.qualcomm.com/invention/technologies/lte/lte-carrier-aggregation)
-
 Carrier aggregation combines mobile operator LTE networks to offer a larger bitrate to the user. Up to five operators can currently "aggregate" as per the last set of 3GPP standards. Currently carrier aggregation only works for the "downlink" (traffic flowing from the core operator network to the device), but uplink aggregation will come soon.
 
 __What does this mean for developers?__
 Countries which have mobile operators using Carrier Aggregation may mean better content delivery and performance. Developers need not do anything to benefit from this. Some developers who robustly test performance may find LTE networks faster and slower across different countries and regions, this will be due to a number of factors and one of those could be Carrier Aggregation. 
 
 #### Transparent Caching
-The mobile network's core network often houses transparent caches. These caches exist to allow faster content delivery to users who have visited or accessed this content before. By caching these within the mobile network mobile operators save money by not sending requests to the external internet and users benefit from faster content delivery.
+The mobile network's core network often houses transparent caches. These caches exist to allow faster content delivery to users who have visited or accessed this content before. By caching these within the mobile network mobile operators save money by not sending requests to the external internet and users benefit from faster content delivery. More information can be found below in ["Caching and CDNs"](#).
 
 __What does this mean for developers?__
 Caching in the mobile network is transparent: this means users and developers have no control over it including controlling how it works or whether they opt in to use it. Some developers have expressed dissatisfaction when mobile netorks have cached resources as it can delay website updates (as cached copies haven't been replaced) or cause irratic behaviour in site loads. The easiest way for developers to prevent any transparent caches from caching their content is to deploy HTTPS; HTTPS content cannot be cached in transparent caches today. Some developers may see performance benefits with transparent caching and may decide to use it through leaving their site as HTTP only, however, there are other strong reasons for moving to HTTPS not discussed in this paper. 
@@ -116,26 +114,32 @@ These caches are "transparent" but they will not cache HTTPS data and will respe
 Within the next few years we should see a shift away from caching towards CDNs, interconnected CDNs and software defined networking. These new methods of getting content closer to the user may mean a decrease in relianceon normal Core Network caching described here.
 
 #### Network Function Virtualisation (NFV)
-NFV is the virtualisation of network function (e.g., MME, SGW, and PGW). Currently mobile networks are built on a lot of physical switches, routers, servers and gateways. NFV wants to change this to virtualised functions, using virtual machines and cloud computing technologies. Thank to NFV, operators can utilize the same physical servers for the different network functions, and reduces the capital expenditures. This also could mean that operators could expand their networks cheaply and for limited times, so situations such as large events which usually put operator networks under a lot of strain can be handled.  
+NFV is the virtualisation of network function (e.g., MME, SGW, and PGW). Currently mobile networks are built on a lot of physical switches, routers, servers and gateways. NFV wants to change this to virtualised functions, using virtual machines and cloud computing technologies. Thank to NFV, operators can utilize the same physical servers for the different network functions, and reduces the expenditure. This also could mean that operators could expand their networks cheaply and for limited times, so situations such as large events which usually put operator networks under a lot of strain can be handled.  
 
-NFV is usually talked about alongside Software Defined Networking (SDN). NFV and SDN aren't the same thing, and SDN is often used so as to realize the nework where NFV is applied. SDN was defined by some organisations and universities, NFV is developed mainly by service providers. 
+NFV is usually talked about alongside Software Defined Networking (SDN). NFV and SDN aren't the same thing, and SDN is often used so as to realize the nework where NFV is applied. SDN was defined by some organisations and universities, NFV is developed mainly by service providers including mobile operators. 
 
 #### Mobile Edge Computing (MEC)
-In [Caching](#) section we explained caching in mobile networks happens mostly in the Core Network. Mobile Edge Computing is a set of new work happening in the ETSI standards body which aims to place intelligent servcer in the RAN. This server will use cloud technologies to manage caches and other intelligent applications like caches or transcoders ultimately allowing content to live or be cached closer to the user saving on the great latencies in mobile networks, or cutting down the time for round trips.
+In the ["Caching and CDNs"](#) section we explained caching in mobile networks happens mostly in the Core Network. Mobile Edge Computing is a set of new work happening in the ETSI standards body which aims to place intelligent servcer in the RAN. This server will use cloud technologies to manage caches and other intelligent applications like caches or transcoders ultimately allowing content to live or be cached closer to the user saving on the great latencies in mobile networks, or cutting down the time for round trips.
 
-##### What this means for developers
-The details of MEC are not decided yet but the ultimate goal is to decrease the latencies for users and take stress off bottlenecks in the operator network. Developers could benefit from a few different ways. First of all content can be placed closer to the user reducing latency times to your site; this could be done transparently, but with end-to-end encryption becoming more wide spread it is more likely developers will need to sign up with a CDN or MEC provider who can provide MEC server caching. Some developers will also have location-specific apps which could sit closer to users in those locations, such as for a large event. Some developers could also push app updates to these MEC servers when they have a large app updates occur. Use cases are still being collected, so please send some in!
+__What does this mean for developers?__
+The details of MEC are not decided yet but the ultimate goal is to decrease the latencies for users and take stress off bottlenecks in the operator network. Developers could benefit from a few different ways. First of all content can be placed closer to the user reducing latency times to your site; this could be done transparently, but with end-to-end encryption becoming more wide spread it is more likely developers will need to sign up with a CDN or MEC provider who can provide MEC server caching. Some developers will also have location-specific apps which could sit closer to users in those locations, such as for a large event. Some developers could also push app updates to these MEC servers when they have a large app updates occur. Until MEC is deployed (which won't be until 2017 at the earliest) developers need not do anything apart from submit any relevant use cases to the standards body ETSI. 
 
 [MEC at ETSI](https://portal.etsi.org/Portals/0/TBpages/MEC/Docs/Mobile-edge_Computing_-_Introductory_Technical_White_Paper_V1%2018-09-14.pdf)
 
 ### Standards Bodies
+It may be helpful to web and internet standards setters and developers to understand the standards bodies in mobile networking and how they interact. A list below introduces these bodies:
+
+* __European Telecommunications Standards Institute (ETSI):__ makes standards for for Information and Communications Technologies (ICT) with a global focus. ETSI organise their standards into technology clusters; relevant to mobile networks includes: security inclyding cyber secuirty, lawful intercept and emergency telecommunication, wireless systems including the standards EDGE, GPRS, UMTS, Mobile Edge Computing and smart cards and standards for Internet of Things including RFID, data security and management and Machine-to-Machine. ETSI has a global focus and is headquartered in Sophia-Antipolis, France.
+* __3rd Generation Partnership Project (3GPP):__ a global collaboration between telecommunications associations. Originally 3GPP worked on developing the 3G standard. It now looks after standards for radio access networks (RAN), the core transport network, service capabilities, codecs, security and quality of service. 
+* __Open Mobile Alliance (OMA)__: develops standards usually on the application layer for the mobile phone industry. Previously these standards where being worked on in a number of other groups and forums, so the OMA brought them together under the same umbrella. The OMA currently work on standards for Network APIs covering chat, file transfer, image share and messaaging. They also standardise authorisation, secuirty and implementation of Network APIs, provisioning, charging and device management scheduling.
+* __GSMA__: 
 
 ### Tools
 network restriction tools
 * AT&T Aro
 * Chrome Devkit
 
-### Conclusion
+### Final Statements
 Erm, we need to write a conclusion, right?
 
 ### Glossary
