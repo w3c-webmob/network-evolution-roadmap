@@ -17,16 +17,16 @@ The external network (internet) is connected to the mobile network via the PGW i
 #### Understanding xG
 3G, 4G and even 5G are common terms we use to describe networks, but they're not always an accurate representation of "evolution" of the mobile networks. xG terms describe a set of requirements, usually identified by a standards body, which describes what that standards body feels is an acceptable set of requirements for the "next generation" in mobile telecommunications. 4G is a great example: requirements set by the ITU were originally too steep to achieve for the first new hardware tests of LTE, later once the ITU reset the requirements some 3G-based services met the requirements and branded themselves as 4G, despite not being a major system upgrade. A major system upgrade in mobile networks would usually require a large hardware change (or rollout) with limited or no backwards compatibility; for LTE the change meant moving to a full IP network, for 5G it may mean virtualisation of the network. 
 
-To make labelling clearer mobile operators tend to refer to the technology rather than the xG, most commonly now: LTE. 5G is, however, also often used. This is because no new standard exists for the evolution of the mobile network past LTE currently, therefore only requirements exist under the label "5G". 
+To make labelling clearer mobile operators tend to refer to the technology rather than the xG, most commonly now: LTE. Since only requirements but no new standards exist for the evolution of the mobile network past LTE, the term "5G" is currently used across users and mobile operators.
 
 #### Downgrading
 It is important to understand how devices downgrade. A device will first attempt to setup a connection with it's highest capable connection mechanism; for most new devices this is LTE. If this is unsuccessul it will downgrade to the next most capable connection (usually HSPA/+) and keep downgrading till it can establish a connection. Most devices will report "no connection" if the allowed bandwidth on the connection is less than 100kb/s. 
 
 ### Current Status (2015)
-Mobile operator technologies are heavily standardised, meaning little differentiation between similar level services throughout the globe. However, countries often differ in their deployment of these technologies, resulting in vast differences in throughput and latencies. Most new devices in the developed world will now come LTE enabled, offering 2G, 3G and LTE capabilties although not all developing countries have a widely deployed LTE network (EXAMPLES - spain, uk, us). Furthermore developing countries may offer 3G devices only. (CHECK on 2G only countries, although I think these are gone).
+Mobile operator technologies are heavily standardised, meaning little differentiation between similar level services throughout the world. However, countries often differ in their deployment of these technologies, resulting in vast differences in throughput and latencies. Most new devices in the developed world will now come LTE enabled, offering 2G, 3G and LTE capabilties. Developing countries may offer 3G devices only, some countries in Africa run 2G networks only, but thankfully these are being upgraded currently.
 
 #### LTE
-LTE architecture is completely based off of IP. Downlink rates on LTE (rates from the core mobile network to a users device) can reach up to 300 Mbit/s, and latencies in the radio access network can be less than 5ms. LTE deals well with fast moving devices (say, if a user is on a train up to 500km/h depending on frequency band) and supports streaming and multi-casts.
+LTE architecture is a complete IP network (both the Core Network and the RAN use IP). Downlink rates on LTE (rates from the core mobile network to a users device) can reach up to 300 Mbit/s, and latencies in the radio access network (RAN) can be less than 5ms. LTE deals well with fast moving devices (say, if a user is on a train up to 500km/h depending on frequency band) and supports streaming and multi-casts.
 
 A user will need an LTE-capable device to use LTE. the list of devices which support LTE are constantly growing.  [Wikipedia](http://en.wikipedia.org/wiki/LTE_%28telecommunication%29#Devices) has a good, almost up-to-date list.
 
@@ -56,14 +56,14 @@ How should data be sent, one file, or many different files? How does the network
 2G currently has the largest reach around the world: GSM (a TDMA based 2G technology) reaches 80% of the world's mobile network subscribers and cdmaOne (CDMA based) reaches 17%. However, a number of mobile network operators are beginning to switch their [2G service off](https://en.wikipedia.org/wiki/2G#2G_Shut_Down).
 
 __What does this mean for developers?__
-2G networks usually have around around 150 - 400 kb/s of bandwidth. This means serving complex webpages, apps and resources become near impossible. 2G is still widely used around the globe, more devices and more people have access to this service than any other. However, developers should remember that some 2G services will be switched off in the next twelve months.
+2G networks usually have around around 150 - 400 kb/s of bandwidth. This means serving complex webpages, apps and resources become near impossible. 2G is still widely used around the world, more devices and more people have access to this service than any other. However, developers should remember that some 2G services will be switched off in 2016.
 
-If you want to support 2G you will need to serve as few resources as possible, and make these resources small. Heavy resources such as video or high resolution images won't load nicely over 2G. Developers are still encouraged to load their mobile site over 2G connections but setup some checks to deal with 2G. For instance: make sure your site runs without javascript and still renders nicely in the instance where images might not load. Try to use web fonts where possible (or fall back to a web font which loads nicely on the page) and use image placeholders (e.g. coloured boxes in css) when images are imperitive to the design. Other normal performance measures should be taken: minimise scripts, use CDNs and allow caching. 
+If you want to support 2G you will need to serve as few resources as possible, and make these resources small. Heavy resources such as video or high resolution images won't load over 2G. Developers are still encouraged to load their mobile site over 2G connections but setup some checks to deal with 2G. For instance: make sure your site runs without javascript and still renders nicely in the instance where images might not load. Try to use web fonts where possible (or fall back to a web font which loads nicely on the page) and use image placeholders when images are imperitive to the design. Other normal performance measures should be taken: minimise scripts, use CDNs and allow caching. 
 
 ### HTTP and Mobile Networks
 The new version of the HTTP protocol (HTTP/2.0) was recently standardised by the IETF. HTTP/2.0 has some impacts to developer performance methods. Pervious performance measures stated that reducing the number of scripts (by creating one large file with all scripts) was better for performance; this was because HTTP/1.1 did not use mutliplexing and had to rely on multiple TCP streams to make multiple requests. HTTP/2.0 uses multiplexing and so can easily make many requests / responses on the same TCP connection. In this case smaller and more scripts and css files are acceptable. 
 
-The Mobile Network manages lower layers of communication than HTTP and TCP. Both HTTP and TCP run ''over'' mobile networks so the behaviour of both of these protocols does not impact the behaviour of the mobile network. Developers can then be assured that whether they send one large script file or lots of smaller ones makes a difference to these layers (applicaton and transport) but not to the mobile network.
+Mobile networks manages lower layers of communication than HTTP and TCP. Both HTTP and TCP run ''over'' mobile networks so the behaviour of both of these protocols does not impact the behaviour of the mobile network. Developers can then be assured that whether they send one large script file or lots of smaller ones makes a difference to these layers (applicaton and transport) but not to the mobile network.
 
 Although, developers should always be aware that the mobile network behaviour will affect the user experience of their apps and sites, and so should use performance methods to make sure their site copes under any circumstances.
 
@@ -74,17 +74,21 @@ Although, developers should always be aware that the mobile network behaviour wi
 If you are developing an extremely robust application you may need to test your application on the bandwidths your users are likely to experience. Try to find out what the coverage of the mobile network is within the countries / regions you are operating (make sure to check for all of LTE, HSPA, EDGE and GPRS!) and test your app using network restriction tools.
 
 ### Current Evolution Areas
-Description and impacts of current startegies.
+Some mobile operators have been working on and deploying technologies to help improve performance on their networks. Some of these are detailed below alongside work commencing to define the requirements for 5G. 
 
 #### Carrier Aggregation
 [info](https://www.qualcomm.com/invention/technologies/lte/lte-carrier-aggregation)
 
-Carrier aggregation combines mobile operator networks to offer a larger bitrate to the user. Carrier aggregation used LTE technologies to do this. Up to five operators can currently "aggregate" as per the last set of 3GPP standards. Currently carrier aggregation only works for the "downlink" (traffic flowing from the core operator network to the device), but uplink aggregation will come soon.
+Carrier aggregation combines mobile operator LTE networks to offer a larger bitrate to the user. Up to five operators can currently "aggregate" as per the last set of 3GPP standards. Currently carrier aggregation only works for the "downlink" (traffic flowing from the core operator network to the device), but uplink aggregation will come soon.
 
-Impacts?
+__What does this mean for developers?__
+Countries which have mobile operators using Carrier Aggregation may mean better content delivery and performance. Developers need not do anything to benefit from this. Some developers who robustly test performance may find LTE networks faster and slower across different countries and regions, this will be due to a number of factors and one of those could be Carrier Aggregation. 
 
-#### Network Management
-Detail network management and impacts
+#### Transparent Caching
+The mobile network's core network often houses transparent caches. These caches exist to allow faster content delivery to users who have visited or accessed this content before. By caching these within the mobile network mobile operators save money by not sending requests to the external internet and users benefit from faster content delivery.
+
+__What does this mean for developers?__
+Caching in the mobile network is transparent: this means users and developers have no control over it including controlling how it works or whether they opt in to use it. Some developers have expressed dissatisfaction when mobile netorks have cached resources as it can delay website updates (as cached copies haven't been replaced) or cause irratic behaviour in site loads. The easiest way for developers to prevent any transparent caches from caching their content is to deploy HTTPS; HTTPS content cannot be cached in transparent caches today. Some developers may see performance benefits with transparent caching and may decide to use it through leaving their site as HTTP only, however, there are other strong reasons for moving to HTTPS not discussed in this paper. 
 
 ### Long Term Evolution Areas
 Description and impacts of long term startegies.
@@ -123,6 +127,8 @@ In [Caching](#) section we explained caching in mobile networks happens mostly i
 The details of MEC are not decided yet but the ultimate goal is to decrease the latencies for users and take stress off bottlenecks in the operator network. Developers could benefit from a few different ways. First of all content can be placed closer to the user reducing latency times to your site; this could be done transparently, but with end-to-end encryption becoming more wide spread it is more likely developers will need to sign up with a CDN or MEC provider who can provide MEC server caching. Some developers will also have location-specific apps which could sit closer to users in those locations, such as for a large event. Some developers could also push app updates to these MEC servers when they have a large app updates occur. Use cases are still being collected, so please send some in!
 
 [MEC at ETSI](https://portal.etsi.org/Portals/0/TBpages/MEC/Docs/Mobile-edge_Computing_-_Introductory_Technical_White_Paper_V1%2018-09-14.pdf)
+
+### Standards Bodies
 
 ### Tools
 network restriction tools
